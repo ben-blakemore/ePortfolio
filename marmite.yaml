@@ -1,6 +1,6 @@
 name: Your Blog
 tagline: Things you talk about
-url: https://YOURUSER.github.io/blog
+url: https://ben-blakemore.github.io/ePortfolio
 menu:
   - ["About", "about.html"]
   - ["Pages", "pages.html"]
