@@ -1,0 +1,34 @@
+@startuml
+
+start
+
+: Power On;
+: Initialize Sensors and Actuators (Camera, Gripper, Lidar, etc.);
+: Connect to User Interface (Voice, App);
+
+repeat
+    : Receive Pickup Request;
+    : Analyze Target Location and Object Info;
+    : Plan Path to Object Location;
+    : Navigate to Object Location;
+
+    repeat
+        : Scan Area for Object;
+        if (Object Found?) then (yes)
+            : Identify and Confirm Object;
+            : Pick Up Object with Gripper;
+            : Plan Path to Delivery Location;
+            : Navigate to Delivery Location;
+            : Deliver Object to User;
+            : Confirm Delivery Success;
+        else (no)
+            : Notify User: "Object not found";
+            : Request Further Instructions;
+        endif
+    repeat while (Object not found and more scanning possible?) is (yes) not (no)
+
+repeat while (More pickup requests?) is (yes) not (no)
+
+stop
+
+@enduml

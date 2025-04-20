@@ -1,0 +1,19 @@
+@startuml
+
+title Robot Modes of Operation State Machine Diagram
+
+[*] --> POWER_ON: System start up
+POWER_ON --> INITIALISE: Robot initialisation
+INITIALISE --> ACTIVE: Robot ready to receive tasks
+INITIALISE --> FAILURE: Error in robot start up
+ACTIVE --> BUSY: Robot receives task
+BUSY --> ACTIVE: Robot completes task
+ACTIVE --> POWER_OFF: Shutdown
+BUSY --> POWER_OFF: Shutdown
+BUSY --> FAILURE: Error in robot operation
+BUSY --> CHARGING: Battery level 10%
+CHARGING --> [*]: Reboot
+FAILURE --> POWER_OFF: Power down
+POWER_OFF --> POWER_ON: Power cycle robot
+
+@enduml

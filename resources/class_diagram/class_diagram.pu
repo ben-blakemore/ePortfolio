@@ -1,0 +1,237 @@
+@startuml class_diagram
+
+class HumanoidRobot {
+    '''''''''' Attributes '''''''''
+    - int robot_id
+    - StateEnum state
+    - LocationEnum location
+    - int battery_level
+    - Queue tasks
+    '''''''''' Operations '''''''''
+    - void initialise()
+    - void init_sequence()
+    + void move_to_location(LocationEnum new_location)
+    + assign_task(Task task)
+    + bool is_available()
+    + void update_battery_level()
+    - void main()
+    - void execute_tasks()
+    - void reboot()
+    - void charge()
+}
+
+class AssemblyLine {
+    '''''''''' Attributes '''''''''
+    - ModeEnum mode
+    - int task_count
+    - TaskScheduler scheduler
+    '''''''''' Operations '''''''''
+    - void main()
+    - void generate_task()
+    - void handle_commands()
+    - void process_command()
+    - void change_mode()
+    - void generate_task()
+}
+
+'' The TaskScheduler is instantiated as an attribute of the AssemblyLine class
+class TaskScheduler {
+    '''''''''' Attributes '''''''''
+    - TaskQueue task_queue
+    - TaskStack task_stack
+    - List<HumanoidRobot> robots
+    '''''''''' Operations '''''''''
+    + void add_task(task)
+    - void assign_task_stack()
+    - void assign_task_queue()
+    - void assign_tasks()
+    - void assign_to_robot(Task task)
+    - void handle_failed_task(Task task)
+    + void create_robot()
+    + void assign_specific_task(int task_id)
+}
+
+class TaskStack {
+    '''''''''' Attributes '''''''''
+    - List<Task> taskStack
+    - int maxStackSize
+    '''''''''' Operations '''''''''
+    + void push(Task task)
+    + Task pop()
+    + Task get_task_by_id(int task_id)
+    + bool is_full()
+    + bool is_empty()
+}
+
+class RobotCLI {
+    '''''''''' Attributes '''''''''
+    - socketfd socket
+    '''''''''' Operations '''''''''
+    - void process_user_input(string input)
+    - void main()
+}
+
+class Logger <<utility>> {
+    '''''''''' Operations '''''''''
+    + {static} log(string message)
+    + {static} clear_log()
+}
+
+enum StateEnum {
+    POWER_OFF
+    POWER_ON
+    INITIALISE
+    ACTIVE
+    BUSY
+    CHARGING
+    FAILURE
+}
+
+enum ModeEnum {
+    MANUAL
+    AUTOMATIC
+}
+
+enum LocationEnum {
+    WELDING_STATION
+    ASSEMBLY_STATION
+    INSPECTION_STATION
+    PACKAGING_STATION
+    CHARGING_STATION
+}
+
+enum ComponentEnum {
+    CIRCUIT_BOARD
+    MOTOR
+    BATTERY
+    SCREEN
+    BUTTON
+    SCREW
+}
+
+class TaskQueue {
+    '''''''''' Attributes '''''''''
+    - List<Task> queue
+    - int max_queue_size
+    '''''''''' Operations '''''''''
+    + void enqueue(Task task)
+    + Task dequeue()
+    + bool is_empty()
+    + bool is_full()
+    + Task get_task_by_id(task_id)
+}
+
+class Task {
+    '''''''''' Attributes '''''''''
+    - int task_id
+    '''''''''' Operations '''''''''
+    + int get_task_id()
+    + void {abstract} execute_task()
+}
+
+class AssemblyTask {
+    '''''''''' Attributes '''''''''
+    - LocationEnum location
+    - List<ComponentEnum> components
+    '''''''''' Operations '''''''''
+    - int validate_assembly()
+    + int execute_task()
+}
+
+class QualityCheckTask {
+    '''''''''' Attributes '''''''''
+    - ComponentEnum component_to_check
+    '''''''''' Operations '''''''''
+    - int perform_inspection()
+    + int execute_task()
+}
+
+class TransportTask {
+    '''''''''' Attributes '''''''''
+    - LocationEnum pickup_location
+    - LocationEnum dropoff_location
+    - ComponentEnum component
+    '''''''''' Operations '''''''''
+    - int check_weight()
+    + int execute_task()
+}
+
+' Extension
+' All ___Task classes are an extension of the base Task type
+Task <|-- AssemblyTask: extends
+Task <|-- QualityCheckTask: extends
+Task <|-- TransportTask: extends
+
+' Implementation
+
+' Composition
+' The AssemblyLine class cannot exist without the RobotCLI class
+AssemblyLine --* RobotCLI
+' The TaskScheduler class cannot exist without the AssemblyLine class
+TaskScheduler --* AssemblyLine
+' The HumanoidRobot class cannot exist without the TaskScheduler class
+HumanoidRobot -u-* TaskScheduler
+' A TaskQueue cannot exist outside of the TaskScheduler or HumanoidRobot classes
+TaskQueue --* TaskScheduler
+TaskQueue --* HumanoidRobot
+' A TaskStack cannot exist outside of the TaskScheduler class
+TaskStack --* TaskScheduler
+
+' Aggregation
+
+' Dependency (strong)
+
+' Dependency (weak)
+
+AssemblyLine ..> Logger: uses
+
+TaskScheduler ..> Task: uses
+TaskScheduler ..> Logger: uses
+
+HumanoidRobot ..> Task: uses
+HumanoidRobot ..> Logger: uses
+
+TaskQueue ..> Task: uses
+TaskQueue .r.> Logger: uses
+
+TaskStack ..> Task: uses
+TaskStack .l.> Logger: uses
+
+' '' RobotCLI depends on TaskScheduler, HumanoidRobot and ModeEnum
+' RobotCLI --> TaskScheduler
+' RobotCLI --> HumanoidRobot
+
+' '' HumanoidRobot depends on all below
+' HumanoidRobot --> ModeEnum
+' HumanoidRobot --> LocationEnum
+' HumanoidRobot --> StateEnum
+
+
+' '' TransportTask depends on LocationEnum and ComponentEnum for its attributes
+' TransportTask --> LocationEnum
+' TransportTask --> ComponentEnum
+
+' '' AssemblyTask depends on LocationEnum and ComponentEnum
+' AssemblyTask --> LocationEnum
+' AssemblyTask --> ComponentEnum
+
+' '' QualityCheckTask depends on ComponentEnum
+' QualityCheckTask --> ComponentEnum
+
+' '' The TaskQueue cannot exist without the HumanoidRobot or TaskScheduler classes
+' TaskQueue --* HumanoidRobot
+' TaskQueue --* TaskScheduler
+
+' '' AssemblyLine cannot exist without RobotCLI
+' AssemblyLine --* RobotCLI
+
+' '' TaskScheduler cannot exist without the AssemblyLine class
+' TaskScheduler --* AssemblyLine
+' '' TaskScheduler depends on Task and TaskStack
+' TaskScheduler --> Task
+' TaskScheduler --> TaskStack
+
+' '' TaskStack depends on Task
+' TaskStack --> Task
+
+@enduml

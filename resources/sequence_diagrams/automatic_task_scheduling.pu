@@ -1,0 +1,53 @@
+@startuml
+
+title AUTOMATIC mode task scheduling
+
+entity AssemblyLine as assemblyline
+entity TaskScheduler as taskscheduler
+entity HumanoidRobot as robot
+database Logger as logger
+queue RobotTaskQueue as robottaskqueue
+queue TaskSchedulerTaskQueue as taskschedulertaskqueue
+queue TaskStack as taskstack
+entity Task as task
+
+activate assemblyline
+activate taskscheduler
+activate robot
+
+assemblyline -> task: generate task
+activate task
+alt task queue is not full
+    assemblyline -> taskschedulertaskqueue: enqueue to taskscheduler taskqueue
+else 
+    assemblyline -> logger: log task assignment failed, task queue full
+end
+
+' Previously failed tasks take precedent over those in the queue
+    loop for all robots
+        alt robot is available
+            taskscheduler -> taskstack: Pop
+            taskscheduler -> robot: assign task
+            robot -> robottaskqueue: add to taskqueue
+            taskscheduler -> taskscheduler: stack_task_assigned == true
+        end
+    end
+    alt stack_task_assigned == false
+        taskscheduler -> logger: log no available robots
+    end
+    taskscheduler -> taskscheduler: stack_task_assigned == false
+
+    loop for all robots
+        alt robot is available
+            taskscheduler -> taskschedulertaskqueue: dequeue task
+            taskscheduler -> robot: assign task
+            robot -> robottaskqueue: add to taskqueue
+            taskscheduler -> taskscheduler: queue_task_assigned == true
+        end
+    end
+    alt queue_task_assigned == false
+        taskscheduler -> logger: log no available robots
+    end
+    taskscheduler -> taskscheduler: queue_task_assigned == false
+
+@enduml
