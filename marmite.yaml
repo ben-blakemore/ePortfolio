@@ -1,12 +1,12 @@
-name: Your Blog
-tagline: Things you talk about
+name: e-Portfolio - Ben Blakemore
+tagline: Reflections on OOP
 url: https://ben-blakemore.github.io/ePortfolio
 menu:
   - ["About", "about.html"]
-  - ["Pages", "pages.html"]
-  - ["Tags", "tags.html"]
-  - ["Follow me", "https://mastodon.social/@YOURUSER"]
-  - ["Github", "https://github.com/rochacbruno/marmite"]
+    # - ["Pages", "pages.html"]
+    # - ["Tags", "tags.html"]
+    #- ["Follow me", "https://mastodon.social/@YOURUSER"]
+  - ["Github", "https://github.com/ben-blakemore"]
 
 
 # More options available to customize the website
