@@ -4,9 +4,9 @@ The two collaborative discussions offered a way for me to gain an increased unde
 ## Engagement
 The primary reason that I felt I did not get as much out of the discussions as I could have done, was due to the lack of engagement from others. With regards to my own posts, I only got one response to each. Unfortunately I found that these responses offered little opportunity for meaningful follow-up as they failed to make any critique or seek further clarification or thoughts on certain points. In my own responses I made sure to pose questions to the author in order to stimulate further conversation, shown below, however I didn't receive any follow-up responses.
 
-![Photo](./media/resposne1.png)
-![Photo](./media/resposne2.png)
-![Photo](./media/resposne3.png)
+![Photo](./media/response1.png)
+![Photo](./media/response2.png)
+![Photo](./media/response3.png)
 
 I found this unfortunate, as I do feel that they could provide a good learning experience. I think this is especially true for a distance learning course where there is naturally little engagement with fellow coursemates. The ability to share viewpoints with others who have varying levels of experience and perspectives is something that I think would be extremely valuable to my own learning. This experience prompted me to ask a friend who also completed a remote MSc in Computer Science, who said that their experience was the same. It would seem then that this is not unique to this course but perhaps distanced learning in general. I suppose it's a difficult problem to solve as the asynchronous, written form of the feedback and conversations makes it hard to foster productive conversation. However, this has left a feeling that I didn't get as much out of these discussions as I could have. I believe that they could be a useful tool in deepening one's understanding, but without the required input from others they fall flat as a method of learning.
 
