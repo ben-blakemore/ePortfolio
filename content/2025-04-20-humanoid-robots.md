@@ -75,4 +75,4 @@ Another change between the design and implementation was regarding the AUTOMATIC
 
 The below video demonstrates the software in use. The creation of multiple robots is shown, a transition to MANUAL mode and the assignment of a task to the next available robot.
 
-<iframe width="260" height="160" src="https://youtube.com/embed/xrob7s5PbCA" title="YouTube video player"></iframe>
+<iframe width="1856" height="1008" src="https://youtube.com/embed/xrob7s5PbCA" title="YouTube video player"></iframe>
