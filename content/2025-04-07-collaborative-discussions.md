@@ -1,0 +1,26 @@
+# Collaborative Discussions
+The two collaborative discussions offered a way for me to gain an increased understanding of the subject material through the lens of my fellow coursemates. Unfortunately though I found that they did not live up to my expectations.
+
+## Engagement
+The primary reason that I felt I did not get as much out of the discussions as I could have done, was due to the lack of engagement from others. With regards to my own posts, I only got one response to each. Unfortunately I found that these responses offered little opportunity for meaningful follow-up as they failed to make any critique or seek further clarification or thoughts on certain points. In my own responses I made sure to pose questions to the author in order to stimulate further conversation, shown below, however I didn't receive any follow-up responses.
+
+![Photo](./media/resposne1.png)
+![Photo](./media/resposne2.png)
+![Photo](./media/resposne3.png)
+
+I found this unfortunate, as I do feel that they could provide a good learning experience. I think this is especially true for a distance learning course where there is naturally little engagement with fellow coursemates. The ability to share viewpoints with others who have varying levels of experience and perspectives is something that I think would be extremely valuable to my own learning. This experience prompted me to ask a friend who also completed a remote MSc in Computer Science, who said that their experience was the same. It would seem then that this is not unique to this course but perhaps distanced learning in general. I suppose it's a difficult problem to solve as the asynchronous, written form of the feedback and conversations makes it hard to foster productive conversation. However, this has left a feeling that I didn't get as much out of these discussions as I could have. I believe that they could be a useful tool in deepening one's understanding, but without the required input from others they fall flat as a method of learning.
+
+## Content
+I found that my experience with the content that the discussions were focused around was mixed. For both, the articles exposed me to concepts that I was previously unfamiliar with.
+
+The first discussion focussed on methods to measure various metrics for software that affected, in part, its reuseability. While familiar with the idea of using metrics to ensure code quality or adherence to a standard. For example MISRA C, a standard used for C programming that prioritises safety and security (MISRA, no date), is one that I have frequently needed to code towards and helps maintain a desired level of quality thoughout a software product in order to reduce future chance of failures or bugs. However the Chidamber & Kemerer (CK) metrics I was unfamiliar with. I found some more interesting than others and this was a theme I explored heavily in my initial post to the forum. For example lines of code I found to be too general a measure as it doesn't account for specifics, while I thought that coupling between objects and lack of cohesion of methods formed an inherent relationship with eachother and therefore offered a "2 for 1" in terms of usefulness when paired together. I was appreciative to have been exposed to these and am open to the possibility of applying them to future work given they are well documented.
+
+The second discussion, exploring the use of IoT within a warehouse environment, introduced the concept of metamodels. I was previously unaware of this concept but through additional research came to understand it, although I personally feel that it is more limited in its applicability than the CK metrics primarily because it is more abstract in nature. I found producing the activity diagram especially useful and found that it had direct applicability to the humanoid robot assignment and so proved its worth almost immediately. I have given further reflections about this in my post focussing on these assignments.
+
+One difficulty that I experienced with both texts was in relation to their grammar, which was poor but at times completely illegible. I found it challenging to engage with them because of this and at times it obscured the intended meaning therefore making the reading experience more difficult. As a result, I lacked confidence in whether I had correctly interpreted each piece, which sometimes made it difficult to form a coherent argument in my posts. However, this experience also highlighted for me how crucial clarity and good structure are in academic writing; it is not just about having good ideas, but about communicating them effectively.
+
+# Reflections
+Overall, I look back on these discussions as a missed opportunity to expand my knowledge and gain the perspective of others on my course. I feel this was mainly due to a general lack of desire among participants to engage meaningfully in the forums, which seems to be a shared experience. I hope that in future discussions, conversation flows more naturally and enables me to achieve these goals.
+
+### References
+MISRA. (no date) *Welcome to MISRA*. Available at: https://misra.org.uk/ (Accessed 1 April 2025).
