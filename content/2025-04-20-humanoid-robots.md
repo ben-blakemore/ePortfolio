@@ -75,4 +75,6 @@ Another change between the design and implementation was regarding the AUTOMATIC
 
 The below video demonstrates the software in use. The creation of multiple robots is shown, a transition to MANUAL mode and the assignment of a task to the next available robot.
 
-<iframe width="1856" height="1008" src="https://youtube.com/embed/xrob7s5PbCA" title="YouTube video player"></iframe>
+<iframe width="860" height="460" src="https://youtube.com/embed/xrob7s5PbCA" title="YouTube video player"></iframe>
+
+On reflection, I felt as if the two assignments really allowed me to explore the main principles of OOP while implementing extra functionality to go beyond the scope of the brief. I enjoyed going first through the process of defining the architecture for the programme, to the implementation then based upon this. I feel as if I was able to consolidate many skills in relation to OOP and software architecture alongside gaining an understanding of the applications that UML has within OOP.
