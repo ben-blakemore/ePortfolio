@@ -1,4 +1,26 @@
-# Humanoid Robot Assignments
+# Individual Coding Assignment
+
+## Experience
+I found that I learned the most from the individual coding assignment. I felt that the problem environment was interesting and applied many of the learned concepts in a way that made the problem of security feel more real. Below are some reflections looking back on how the solution evolved following the group project.
+
+### System Design
+The design proposed in the group assignment was a lot more complex than that of the final implementation. This was mostly however due to the fact that the Flask-RESTful library superseeded many of the classes defined in the class diagram. For example, the SessionManager functionality is something that is offered out of the box by way of providing the developer with a way to get the token of the user that is logged in. This made session authentication as simple as decoding the session token and checking the correct priviledges were held to perform the requested operation. Having security features managed by a well-known library is preferable since as an individual I am much more likely to make mistakes implementing these features. It does however mean that should a security vulnerability be found in this library, my application becomes at risk.
+
+### Development Approach and Issues
+I found that I spent too much time debugging issues relating to small logic errors that resulted in database or run-time exceptions. Looking back, this can be partly attributed to my approach regarding endpoints. I still believe that the approach to have one set of secure and insecure endpoints, with logic to route to the relevant one depending on whether or not the application was in secure mode, was a sensible one. However this did ultimately result in large amounts of duplicated code that meant I would fix many similar bugs in multiple areas. If I were to repeat the assignment I would spend time consolidating this duplicate code into helper functions that each endpoint could make use of. My original thinking was that I would get around to this once I had implemented the base set of features however it would have saved me more time in the long run I expect were I to address this sooner.
+
+In order to make the system susceptible to SQL injection attacks, SQL parameterisation was not used, instead being replaced with the `executescript` function which can be used to chain multiple commands together.
+
+![Photo](./media/sql_injection.png "Susceptible to SQL Injection")
+
+My original intention was to have all insecure endpoints susceptible in this way however I discovered that using this function meant no results were returned when querying a database therefore preventing proper functionality. This was another sink of time, as I spent considerable effort trying for both functionality alongside susceptibility. Ultimately I decided that it was better to leave a single endpoint exposed and make a hard check for the contents of the request, in the interest of time.
+
+### Testing
+Due to the aforementioned lack of time towards the end of the assignment, testing was neglected more than I would have liked. I used PyTest to write some unit tests that verified permissions based functionality however I recognise the scope of this was limited. For example there were no tests verifying that records had been properly deleted following a request to do so. Should the testing approach been allotted more time, I believe it would have become more difficult to test due to some of the code. For example the `process_command` function which handles user input within the command line interface (CLI) programme, seen below.
+
+![Photo](./media/cyclomatic_complexity.png "IDE warning of high cyclomatic complexity")
+
+As can be seen, the IDE is warning of high cyclomatic complexity which is a measure of the number of linearly independent paths that a piece of software can take (McCabe, 1976).
 
 As mentioned in my UML page, I feel that these assignments are what I got the most out of in the module. I thought that the problem environment was an interesting one and lent itself well to an object orientated approach. Below are some of my reflections looking back on the system design and implementation assignments.
 
@@ -80,4 +102,4 @@ The below video demonstrates the software in use. The creation of multiple robot
 On reflection, I felt as if the two assignments really allowed me to explore the main principles of OOP while implementing extra functionality to go beyond the scope of the brief. I enjoyed going first through the process of defining the architecture for the programme, to the implementation then based upon this. I feel as if I was able to consolidate many skills in relation to OOP and software architecture alongside gaining an understanding of the applications that UML has within OOP.
 
 ### References
-Lenz, M. (2018) *Python Continuous Integration and Delivery: A Concise Guide with Examples*. O'Reilly: Apress. Available at: https://learning.oreilly.com/library/view/python-continuous-integration/9781484242810/ (Accessed: 20 April 2025).
+McCabe, T. J. (1976) 'A Complexity Measure', **IEEE Transactions On Software Engineering**, SE-2(4), pp. 309. Available at: https://ieeexplore-ieee-org.uniessexlib.idm.oclc.org/stamp/stamp.jsp?tp=&arnumber=1702388&tag=1 (Accessed: 17 July 2025)

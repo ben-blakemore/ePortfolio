@@ -14,18 +14,17 @@ Our one team meeting was reasonably successful. The three of us who were present
 ![Photo](./media/SYN_Flood.png "SYN Flood Python script")
 
 The intended result was to slow a simple server script running in parallel due to the demand to field so many requests. However this didn't ultimately work, I believe due to pre-configured firewall rules on my machine. I could have further investigated one of the methods introduced in Unit 2, Evil Regex, a type of regular expression that can cause large amounts of backtracking and therefore cause a programme to crash or freeze (https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS). My answers to the questions posed in this unit are below.
-    
-    1. What is Evil Regex?
-       **Regular expressions that are vulnerable to catastrophic backtracking in which the regex engine hangs on certain expressions due to nested quantifiers or ambiguous patterns. It results in performance issues or even system crashes and is therefore considered a security risk.**
-    2. What are the common problems associated with the use of regex? How can these be mitigated?
-       **Catastrophic backtracking  - can be mitigated by avoiding nested quantifiers such as (.*)
-         Overly complex expressions - tools such as regex101 can be used to test patterns earlier
-         Security vulnerabilities   - execution timeouts when used in environments requiring better security**
-    3. How and why could regex be used as part of a security solution?
-       **Regular expressions can be a powerful tool in security solutions for:
-         - Input validation: Ensuring user inputs match expected formats such as email addresses
-         - Pattern detection: Identifying suspicious patterns in logs or file names, for example SQL injection attacks
-         - Data sanitization: Stripping or replacing unsafe characters from user input**
+1. What is Evil Regex?
+    Regular expressions that are vulnerable to catastrophic backtracking in which the regex engine hangs on certain expressions due to nested quantifiers or ambiguous patterns. It results in performance issues or even system crashes and is therefore considered a security risk.
+2. What are the common problems associated with the use of regex? How can these be mitigated?
+    Catastrophic backtracking  - can be mitigated by avoiding nested quantifiers such as (.*)
+        Overly complex expressions - tools such as regex101 can be used to test patterns earlier
+        Security vulnerabilities   - execution timeouts when used in environments requiring better security
+3. How and why could regex be used as part of a security solution?
+    Regular expressions can be a powerful tool in security solutions for:
+        - Input validation: Ensuring user inputs match expected formats such as email addresses
+        - Pattern detection: Identifying suspicious patterns in logs or file names, for example SQL injection attacks
+        - Data sanitization: Stripping or replacing unsafe characters from user input
 
 I found that the quality of the work from my teammates varied. The class diagram I was impressed with and the individual repsonsible was eager to make updates in response to my comments and in accordance with any directional shifts in our design - even while attending a business conference for their full-time job. I found this dedication to ensuring the team achieved its goal commendable and made sure to feed this back to them, in addition to stressing that it shouldn't leave them feeling stressed or that too much is expected of them.
 
