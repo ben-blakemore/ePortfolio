@@ -153,7 +153,6 @@ for student in loaded_data["students"]:
 
 Running this helped visualise the format my data would take in the final application. The output can be seen below in @serialisation.
 
-![Photo](./media/serialisation.png "Serialisation and deserialisation of data")
 #figure(
   image("../content/media/serialisation.png", width: 90%),
   caption: [
