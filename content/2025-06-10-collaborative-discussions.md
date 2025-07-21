@@ -7,9 +7,9 @@ The primary, and most obvious, reason I feel that the discussions don't live up 
 ## Reflection
 As I write this, I struggle to think of why engagement is so low for these discussions. I think it could be the fact that they aren't directly marked and so perhaps others simply see them as superfluous compared to the marked assignments and would rather spend their time on them.
 
-However, I must also acknowledge that I too contribute to the lack of engagement, my feelings on which are complicated. In the previous module, I made sure to write well thought out and engaging responses that provided the original author with further questions to respond back to. Unfortunately I didn't receive responses to these and so came away from it feeling like I had wasted my time, ultimately tainting my eagerness to contribute in this module.
+However, I must also acknowledge that I too contribute to the lack of engagement, on which my feelings are complicated. In the previous module, I made sure to write well thought out and engaging responses that provided the original author with further questions to respond back to. Unfortunately I didn't receive responses to these and so came away from it feeling like I had wasted my time, ultimately tainting my eagerness to contribute in this module.
 
-On the one hand, I shouldn't let the lack of participation from others hold back my own learning and perhaps by continuing to engage others will be more likely to themselves. However they are meant to be collaborative and so far this has been missing for me, instead feeling as if I am posting into the void to never get a response. 
+On the one hand, I shouldn't let the lack of participation from others hold back my own learning and perhaps by continuing to engage, others will be more likely to themselves. However they are meant to be collaborative and so far this has been missing for me, instead feeling as if I am posting into the void to never get a response. 
 
 What I did appreciate in this module's discussions though was the tutor's feedback. I felt that it went above and beyond what I expected, with each post receiving a dedicated feedback video. The criticisms were fair and the constructive feedback useful.
 
