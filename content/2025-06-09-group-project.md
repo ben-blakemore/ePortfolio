@@ -13,33 +13,36 @@ Our one team meeting was reasonably successful. The three of us who were present
 
 ![Photo](./media/SYN_Flood.png "SYN Flood Python script")
 
-The intended result was to slow a simple server script running in parallel due to the demand to field so many requests. However this didn't ultimately work, I believe due to pre-configured firewall rules on my machine.
+The intended result was to slow a simple server script running in parallel due to the demand to field so many requests. However this didn't ultimately work, I believe due to pre-configured firewall rules on my machine. I could have further investigated one of the methods introduced in Unit 2, Evil Regex, a type of regular expression that can cause large amounts of backtracking and therefore cause a programme to crash or freeze (https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS). My answers to the questions posed in this unit are below.
+    
+    1. What is Evil Regex?
+       **Regular expressions that are vulnerable to catastrophic backtracking in which the regex engine hangs on certain expressions due to nested quantifiers or ambiguous patterns. It results in performance issues or even system crashes and is therefore considered a security risk.**
+    2. What are the common problems associated with the use of regex? How can these be mitigated?
+       **Catastrophic backtracking  - can be mitigated by avoiding nested quantifiers such as (.*)
+         Overly complex expressions - tools such as regex101 can be used to test patterns earlier
+         Security vulnerabilities   - execution timeouts when used in environments requiring better security**
+    3. How and why could regex be used as part of a security solution?
+       **Regular expressions can be a powerful tool in security solutions for:
+         - Input validation: Ensuring user inputs match expected formats such as email addresses
+         - Pattern detection: Identifying suspicious patterns in logs or file names, for example SQL injection attacks
+         - Data sanitization: Stripping or replacing unsafe characters from user input**
+
+I found that the quality of the work from my teammates varied. The class diagram I was impressed with and the individual repsonsible was eager to make updates in response to my comments and in accordance with any directional shifts in our design - even while attending a business conference for their full-time job. I found this dedication to ensuring the team achieved its goal commendable and made sure to feed this back to them, in addition to stressing that it shouldn't leave them feeling stressed or that too much is expected of them.
+
+![Photo](./media/school_app3x.png "Class diagram for proposed solution")
+
+However the API specification that was first delivered I found to be slightly lacking. A link was provided to a website that could be used to visualise the API, however when I went to view it there were basic syntax errors preventing it from showing properly.
+
+![Photo](./media/errors.png "API specification errors")
+
+This meant they either didn't proof check it themselves on this website they were providing us, or simply didn't think to rectify the basic errors. I found this lack of attention a signal that they had not been thorough in their checking of their own work before sharing which I found disappointing as it signalled a lack of concern towards the quality of work we submit.
 
 ## Reflections
-- not wanting to write all the contract, important to balance others opinions
-- taking the lead with trying to organise meetings
-- why difficult to organise the call
-- researching vulnerabilities
+I would say my feelings towards my experience overall trend negatively unfortunately. I felt that two of us in the team were reponsible for the majority of the work. Although I took a leading role, I felt that I was forced to take action due to the inaction of others. The lack of opportunities for brainstorming within the team was what I felt held us back most.
 
-The Humanoid Robot assignments are what I feel I have learned the most from in the module. I felt that first designing the system with the help of UML diagrams to be used, along with feedback received from the tutor, to implement the proposed design was both a sensible and logical workflow. The use of UML diagrams really helped me flesh out what the intended system would need to do. I especially found creating the class diagram, shown below, helpful.
+The part that I struggle to understand most is why it was so hard to organise calls between the team. I was always of the opinion that getting something organised early and seeting a direction for our desig would give us the best chance of producing a quality submission. Having reflected on this intensly since, I'm no closer to an answer. Perhaps by taking a more leading role, others found it easier to relinquish responsibility and allow the process to unfold passively, trusting that I would keep things moving. Another possible explanation is that their working styles simply differed from mine. I did notice a surge in activity as the deadline approached, which suggests they were more comfortable leaving things until later, whereas I preferred to get started earlier.
 
-![Photo](./media/class_diagram/class_diagram.png "Class diagram")
-
-My background as a software engineer is primarily in relation to safety critical software, so using UML as a tool is not unfamiliar to me. In order to refresh my understanding I read through the Unit 4 conference paper by Huzar, Z. et al. (2005) 'Consistency Problems in UML-Based Software Development'. I found that one section in particular stood out to me, in relation to approaches for checking the consistency of the model. They state that the use of formal languages such as B, a "state-based method ... for specifying, designing and coding software systems" (Cansell and Mery, 2003, p. 1), can be used to perform these checks. Being unfamiliar with the B method I then researched it further and found it shares similarities with Z notation, a branch of formal methods for  specifying computer-based systems. It allows for the behaviour of the system to be reasoned about in a mathmatical way and has found uses in both academic and industrial settings (Bowen, 2014).
-
-In a previous role, I gained experience with the Z formal specification language, which was employed in the development of a UK air traffic control system. Encountering the use of formal methods in the context of UML was therefore unexpected. However, upon reflection, the integration of formal specification techniques with design models appears both logical and advantageous. Having previously worked with tools such as SPARK, a formally defined subset of the Ada programming language used for the development and verification of high-integrity systems (AdaCore, no date), I have developed an appreciation for the role of formal methods in enabling rigorous reasoning about software. What I had not fully considered before, however, was the potential of applying formal reasoning techniques at the design stage. Reflecting on this has led me to recognise the significant benefits such an approach could bring.
-
-The Correctness-by-Construction (CbC) approach has been a fundamental principle throughout my career in the development of safety-critical software. CbC promotes an incremental method of software development, whereby the process is initially guided by a formal specification and subsequently refined through the application of rules that impose side conditions to ensure the program's correctness at each stage (Bordis et al., 2023). While the benefits of this approach are clear, in practice I have often found its application to be overly prescriptive, leaving little scope for the integration of UML models during the design phase. Upon reflection, I now recognise that combining the rigor of CbC with tools designed to ensure the consistency of UML models could significantly enhance the development of safety-critical systems. This insight has prompted me to explore this integration further in my professional work.
-
-I thought it quite remarkable that a single paragraph in the reading for Unit 4 lead to this wider realisation and intent to apply the findings to my professional work.
-
-## PlantUML
-
-As part of Unit 4 I also started thinking about what function my Humanoid Robot would serve. It was at this point that I decided to pursue the idea of a robot working within an assembly line type of environment. In order to try and begin fleshing out the workflow of the robot, I created an activity diagram, shown below.
-
-![Photo](./media/activity_diagrams/seminar.jpg "Activity diagram")
-
-For all UML diagrams in the module I used PlantUML. This is a tool I have used previously in a professional capacity. It uses its own versatile language, offering a programmatic approach to the generation of diagrams. This allows for diagrams to remain dynamic in nature as all generation of diagram elements is handled by PlantUML itself. I found this extremely useful as it meant I could quickly iterate over each diagram without having to spend time manually redrawing connections or moving elements around. I did however find that sometimes I had to play around with the ordering of certain elements in order to make the layout of the diagram appear a certain way. This was certainly not a major issue with the tool and for future assignments I plan to continue using it as it definitely helped reduce time spent on diagrams, leaving crucial time to focus on other important aspects of the assignments.
+Following the conclusion of this task, I explored resources to better understand team dynamics in online learning environments. In doing so, I wanted to see if the tutor had made any publications on the topic as I felt this would be directly applicable. I was pleasantly surprised to find a publication focused on students’ experiences with group work in virtual settings. I found that many of the experiences shared here matched my own. One point that stood out to me from the tutor’s publication was the observation that, in many teams, there was often a member who contributed less significantly than others. Interestingly, this wasn’t usually reported directly by the teams but was inferred through individual performance on related assessments. This resonated with me during our own group task, as it highlighted the challenge of addressing imbalances in participation. It made me more mindful of the importance of clear communication within the team and the role that group dynamics can play in shaping both outcomes and individual learning (https://doi.org/10.2478/eurodl-2023-0001)
 
 ### References
 Mirkovic, J. et al. (2004) _Internet Denial of Service: Attack and Defense Mechanisms_, O'Reilly: Pearson. Available at: https://learning.oreilly.com/library/view/internet-denial-of/0131475738/ch02.html#ch02 (Accessed: 21 May 2025).
