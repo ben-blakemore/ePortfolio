@@ -23,8 +23,6 @@ It was nice to see the tutor then reply to the discussion, giving a positive res
 
 This was a nice way to finish the discussion and validated for me that the topics discussed within were both relevant and something in which a subject matter expert agreed upon.
 
-
-
 TODO add content from second discussion
 
 # References
