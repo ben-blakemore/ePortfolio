@@ -5,8 +5,27 @@ I found the discussion focussing on the challenges faced by traditionally brick-
 
 ![Photo](./media/collaboration/initial_post.png "Initial post")
 
+As part of my post, I referred to the 2013 Target data breach, where attackers exploited a vulnerability in a third-party heating, ventilation, and air-conditioning (HVAC) system to gain access to Target’s network, ultimately compromising the Personally Identifiable Information (PII) of over 70 million customers (Columbia University, 2021). This case highlighted a recurring theme throughout the module: weaknesses in third-party applications or integrations can act as indirect entry points, exposing an organisation’s own systems and services to significant risk.
+
+I received a response from Sergei, one of my fellow course mates, shown below.
+
+![Photo](./media/collaboration/sergei_response.png "Sergei response")
+
+I felt that this response really engaged with my initial post and gave me some great questions to address in my follow-up post, shown below.
+
+![Photo](./media/collaboration/response_to_sergei.png "Response to Sergei")
+
+I particularly liked the question he raised about improving the wellbeing of security analysts. My main takeaway from the discussion with Sergei was the importance of remembering that there are real people at the heart of a Security Operations Centre (SOC). To maintain both effectiveness and positive outcomes, their roles need to remain varied, engaging, and rewarding, rather than becoming repetitive or overwhelming.
+
+It was nice to see the tutor then reply to the discussion, giving a positive response on the discussion that he had seen.
+
+![Photo](./media/collaboration/tutor_response.png "Tutor response")
+
+This was a nice way to finish the discussion and validated for me that the topics discussed within were both relevant and something in which a subject matter expert agreed upon.
+
 
 
 TODO add content from second discussion
 
 # References
+Columbia University. (2021) _Target Cyber Attack: A Columbia University Case Study_. Available at: https://www.sipa.columbia.edu/sites/default/files/2022-11/Target%20Final.pdf (Accessed: 31 July 2025).
