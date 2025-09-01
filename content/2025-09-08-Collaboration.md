@@ -23,7 +23,13 @@ It was nice to see the tutor then reply to the discussion, giving a positive res
 
 This was a nice way to finish the discussion and validated for me that the topics discussed within were both relevant and something in which a subject matter expert agreed upon.
 
-TODO add content from second discussion
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The second discussion topic was one I was familiar with - the Log4J exploit. When this occurred, in 2021, I remember reading many articles and news stories on it, trying to understand how it had come about so it was nice to revisit it - and already having a basic understanding of the context certainly helped!
+
+Below is my initial post into the second collaborative discussion forum.
+
+![Photo](./media/collaboration/second_post.png "Initial post to second discussion")
 
 # References
 Columbia University. (2021) _Target Cyber Attack: A Columbia University Case Study_. Available at: https://www.sipa.columbia.edu/sites/default/files/2022-11/Target%20Final.pdf (Accessed: 31 July 2025).
